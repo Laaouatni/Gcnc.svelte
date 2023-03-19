@@ -1,17 +1,23 @@
 <script lang="ts">
-  import G1 from "$lib/Gcore/Gcode/Gnative/Gfunctionalities/G1/G1.svelte";
+  import G1 from "$lib/Gcore/Gcode/Gnative/Gfunctionalities/Gmove/G1moveSlow/G1moveSlow.svelte";
+  // import G0 from "$lib/Gcore/Gcode/Gnative/Gfunctionalities/Gmove/G0moveFast/G0moveFast.svelte";
 
-  function createMultipleG1(n: number) {
-    let g1s = [];
+  function createMultipleG(n: number) {
+    let g = [];
     for (let i = 0; i < n; i++) {
-      g1s.push({x:10*i, y:20*i, z:30*i});
+      g.push({
+        x:10*i, 
+        y:20*i, 
+        z:30*i
+      });
     }
-    return g1s;
+    return g;
   }
 </script>
 
 <main class="p-4 grid gap-2">
-    {#each createMultipleG1(10) as thisG1obj}
+    {#each createMultipleG(10) as thisG1obj}
       <G1 positionXYZ={thisG1obj} />
+      <!-- <G0 positionXYZ={thisG1obj} /> -->
     {/each}
 </main>
