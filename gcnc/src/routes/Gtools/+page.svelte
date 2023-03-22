@@ -1,3 +1,10 @@
+<script lang="ts">
+  import GtoolsWarehouse from "$lib/Gcore/Gtools/GtoolsWarehouse/GtoolsWarehouse.svelte";
+</script>
+
+<div class="p-4">
+  <GtoolsWarehouse />
+</div>
 
 
 <!-- <script lang="ts">

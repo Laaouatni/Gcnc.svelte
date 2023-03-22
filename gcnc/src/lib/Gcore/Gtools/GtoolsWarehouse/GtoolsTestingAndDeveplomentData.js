@@ -1,9 +1,10 @@
-export default {
-  1: {
+export default [
+  {
+    id: 1,
     diameter: 50,
     numberTeeth: 4,
     type: "FRESA_SPIANATURA",
-    name: "Fresa spianatrice 50mm",
+    nameDescription: "Fresa spianatrice 50mm",
     angle: 90,
     length: 100,
     feedPerTeeth: 0.2,
@@ -13,14 +14,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  2: {
+  {
+    id: 2,
     diameter: 8,
     numberTeeth: 4,
     type: "PUNTA_ELICOIDALE",
-    name: "Punta elicoidale 8mm",
+    nameDescription: "Punta elicoidale 8mm",
     angle: 118,
     length: 60,
     feedPerTeeth: 0.1,
@@ -30,14 +32,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  3: {
+  {
+    id: 3,
     diameter: 10,
     numberTeeth: 2,
     type: "MASCHIATORE",
-    name: "Maschiatura M10",
+    nameDescription: "Maschiatura M10",
     angle: 90,
     length: 60,
     feedPerTeeth: 0.01,
@@ -47,14 +50,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  4: {
+  {
+    id: 4,
     diameter: 20,
     numberTeeth: 4,
     type: "FRESA_SPIANATURA",
-    name: "Fresa spianatrice 20mm",
+    nameDescription: "Fresa spianatrice 20mm",
     angle: 90,
     length: 60,
     feedPerTeeth: 0.1,
@@ -64,14 +68,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  5: {
+  {
+    id: 5,
     diameter: 3,
     numberTeeth: 2,
     type: "PUNTA_ELICOIDALE",
-    name: "Punta elicoidale 3mm",
+    nameDescription: "Punta elicoidale 3mm",
     angle: 130,
     length: 30,
     feedPerTeeth: 0.05,
@@ -81,14 +86,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  6: {
+  {
+    id: 6,
     diameter: 12,
     numberTeeth: 4,
     type: "FRESA_SPIANATURA",
-    name: "Fresa spianatrice 12mm",
+    nameDescription: "Fresa spianatrice 12mm",
     angle: 90,
     length: 40,
     feedPerTeeth: 0.15,
@@ -98,14 +104,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  7: {
+  {
+    id: 7,
     diameter: 5,
     numberTeeth: 2,
     type: "PUNTA_ELICOIDALE",
-    name: "Punta elicoidale 5mm",
+    nameDescription: "Punta elicoidale 5mm",
     angle: 118,
     length: 40,
     feedPerTeeth: 0.08,
@@ -115,14 +122,15 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
+      z: 0,
+    },
   },
-  8: {
+  {
+    id: 8,
     diameter: 8,
     numberTeeth: 4,
     type: "FRESA_SPIANATURA",
-    name: "Fresa spianatrice 8mm",
+    nameDescription: "Fresa spianatrice 8mm",
     angle: 90,
     length: 30,
     feedPerTeeth: 0.05,
@@ -132,7 +140,7 @@ export default {
     compensation: {
       x: 0,
       y: 0,
-      z: 0
-    }
-  }
-}
+      z: 0,
+    },
+  },
+];
