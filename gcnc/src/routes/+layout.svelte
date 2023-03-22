@@ -1,5 +1,7 @@
 <script lang="ts">
   import "../app.css";
+  import { page } from "$app/stores";
+  import { fly, scale, slide } from "svelte/transition";
 
   import GuiBottomNav from "$lib/GuiComponents/GuiBottomNav/GuiBottomNav.svelte";
 
@@ -13,19 +15,22 @@
     }
   }
 
-  const navigationArray = [
-    new Gpage("G1"),
-    new Gpage("Gtools"),
-  ];
+  const navigationArray = [new Gpage("G1"), new Gpage("Gtools")];
 
   let navHeight: number;
 </script>
 
 <GuiBottomNav GpagesArray={navigationArray} bind:navHeight />
 
-<main class="fixed w-full overflow-auto" style="--nav-height: {navHeight}px;">
-  <slot />
-</main>
+{#key $page.route}
+  <main
+    in:slide
+    class="fixed w-full overflow-auto p-4"
+    style="--nav-height: {navHeight}px;"
+  >
+    <slot />
+  </main>
+{/key}
 
 <style>
   main {
