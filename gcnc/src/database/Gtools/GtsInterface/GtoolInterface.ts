@@ -4,6 +4,7 @@ type rotationDirection = "CLOCKWISE" | "COUNTERCLOCKWISE";
 export default interface GtoolInterface {
   id: number;
   diameter: number;
+  isActived: boolean;
   numberTeeth?: number;
   type?: toolType;
   nameDescription?: string;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
+  import GuiGridColResponsiveContainer from "$lib/GuiComponents/GuiGridColResponsiveContainer/GuiGridColResponsiveContainer.svelte";
   import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
   import GtoolsStore from "../../../../database/Gtools/GtoolsStore";
   import Gtool from "../Gtool/Gtool.svelte";
@@ -8,9 +8,10 @@
   $GtoolsStore = GtoolsTestingAndDeveplomentData;
 </script>
 
-<GuiCard>
-  <GuiTitle>my tools:</GuiTitle>
+<GuiTitle>my tools:</GuiTitle>
+
+<GuiGridColResponsiveContainer>
   {#each $GtoolsStore as tool}
     <Gtool toolObjData={tool} />
   {/each}
-</GuiCard>
+</GuiGridColResponsiveContainer>

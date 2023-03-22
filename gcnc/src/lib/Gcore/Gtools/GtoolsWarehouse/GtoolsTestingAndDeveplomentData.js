@@ -16,6 +16,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: true
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 3,
@@ -52,6 +54,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 4,
@@ -70,6 +73,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 5,
@@ -88,6 +92,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 6,
@@ -106,6 +111,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 7,
@@ -124,6 +130,7 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
   {
     id: 8,
@@ -142,5 +149,6 @@ export default [
       y: 0,
       z: 0,
     },
+    isActived: false
   },
 ];
