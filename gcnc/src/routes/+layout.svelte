@@ -8,14 +8,16 @@
   class Gpage {
     GpageName: string;
     GpageRoute: string;
+    GpagePrefix: string;
 
     constructor(GpageName: string) {
       this.GpageName = GpageName;
-      this.GpageRoute = `./${GpageName}`;
+      this.GpagePrefix = "devDemo";
+      this.GpageRoute = `/${this.GpagePrefix}/${this.GpageName}`;
     }
   }
 
-  const navigationArray = [new Gpage("G1"), new Gpage("Gtools")];
+  const navigationArray = [new Gpage("G1"), new Gpage("Gtools"), new Gpage("Gmachine")];
 
   let navHeight: number;
 </script>

@@ -1,4 +1,8 @@
+<script>
+  import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
+</script>
 
+<GuiTitle Gtitle="Home" />
 
 <!-- <script lang="ts">
   import G1 from "$lib/Gcore/Gcode/Gnative/Gfunctionalities/Gmove/G1moveSlow/G1moveSlow.svelte";
