@@ -3,7 +3,7 @@
   import { page } from "$app/stores";
   import { slide } from "svelte/transition";
 
-  import GuiBottomNav from "$lib/GuiComponents/GuiBottomNav/GuiBottomNav.svelte";
+  import GuiPageNav from "$lib/GuiComponents/GuiPageNav/GuiPageNav.svelte";
 
   class Gpage {
     GpageName: string;
@@ -17,12 +17,16 @@
     }
   }
 
-  const navigationArray = [new Gpage("G1"), new Gpage("Gtools"), new Gpage("Gmachine")];
+  const navigationArray = [
+    new Gpage("G1"),
+    new Gpage("Gtools"),
+    new Gpage("Gmachine"),
+  ];
 
   let navHeight: number;
 </script>
 
-<GuiBottomNav GpagesArray={navigationArray} bind:navHeight />
+<GuiPageNav GpagesArray={navigationArray} bind:navHeight />
 
 {#key $page.route}
   <main
