@@ -1,7 +1,7 @@
 <script lang="ts">
   import "../app.css";
   import { page } from "$app/stores";
-  import { fly, scale, slide } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
   import GuiBottomNav from "$lib/GuiComponents/GuiBottomNav/GuiBottomNav.svelte";
 
