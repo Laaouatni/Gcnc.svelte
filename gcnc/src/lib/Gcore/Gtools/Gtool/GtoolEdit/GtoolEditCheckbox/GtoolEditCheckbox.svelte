@@ -1,6 +1,18 @@
 <script lang="ts">
+  import GtoolsStore from "../../../../../../database/Gtools/GtoolsStore";
+  import type GtoolInterface from "../../../../../../database/Gtools/GtoolInterface";
+  
   export let GtoolId: number;
   export let isGtoolChecked: boolean = false;
+
+  $: GtoolsStore.update((Gtools: GtoolInterface[]) => {
+    return Gtools.map((Gtool) => {
+      if (Gtool.id === GtoolId) {
+        Gtool.isEditChecked = isGtoolChecked;
+      }
+      return Gtool;
+    });
+  });
 
   $: actionStringName = isGtoolChecked ? "deselect" : "select";
 </script>

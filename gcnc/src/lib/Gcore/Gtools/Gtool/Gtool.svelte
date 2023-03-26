@@ -1,6 +1,6 @@
 <script lang="ts">
   import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
-  import type GtoolInterface from "../../../../database/Gtools/GtsInterface/GtoolInterface";
+  import type GtoolInterface from "../../../../database/Gtools/GtoolInterface";
   import GtoolKey from "./GtoolKey/GtoolKey.svelte";
   import GtoolValue from "./GtoolValue/GtoolValue.svelte";
 

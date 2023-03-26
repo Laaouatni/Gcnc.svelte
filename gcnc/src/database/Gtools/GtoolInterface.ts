@@ -5,6 +5,7 @@ export default interface GtoolInterface {
   id: number;
   diameter: number;
   isActived: boolean;
+  isEditChecked: boolean;
   numberTeeth?: number;
   type?: toolType;
   nameDescription?: string;

@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type GtoolInterface from "./GtsInterface/GtoolInterface";
+import type GtoolInterface from "./GtoolInterface";
 
 const GtoolsStore = writable<GtoolInterface[]>([]);
 
