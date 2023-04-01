@@ -3,12 +3,12 @@
 
   export let GpagesArray: { GpageName: string; GpageRoute: string }[];
 
-  export let navHeight: number;
+  export let navWidth: number;
 </script>
 
 <nav
-  bind:clientHeight={navHeight}
-  class="flex justify-around bg-slate-100 fixed top-0 w-full shadow-md"
+  bind:clientWidth={navWidth}
+  class="grid justify-around bg-slate-100 fixed top-0 shadow-md h-full"
 >
   {#each GpagesArray as Gpage}
     <GuiPageNavItems GpageObj={Gpage} />
