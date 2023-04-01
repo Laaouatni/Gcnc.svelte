@@ -19,7 +19,7 @@
     --tw-shadow-color: ${hexColor};
     background-color: ${hexColor};
   `}
-  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition"
+  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition active:scale-[0.99]"
 >
   <slot />
 </button>
