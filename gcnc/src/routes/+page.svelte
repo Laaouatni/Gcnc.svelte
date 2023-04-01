@@ -1,8 +1,30 @@
-<script>
+<script lang="ts">
   import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
+
+  import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
+
+  const pages = import.meta.glob("./devDemo/**/+page.svelte");
+
+  const pageLinks = Object.entries(pages).map(([path]) => {
+    const pagePath = path.replace("./", "").replace("/+page.svelte", "");
+    return {
+      path: `/${pagePath}`,
+      name: pagePath.charAt(0).toUpperCase() + pagePath.slice(1),
+    };
+  });
 </script>
 
-<GuiTitle Gtitle="Home" />
+<div class="flex h-screen flex-col p-4">
+  <GuiTitle Gtitle="Home" />
+
+  <ul class="grid h-full gap-4 text-xl">
+    {#each pageLinks as { path, name }}
+      <GuiCard isActive={false}>
+        <a class="grid place-items-center text-3xl" href={path}>{name}</a>
+      </GuiCard>
+    {/each}
+  </ul>
+</div>
 
 <!-- <script lang="ts">
   import G1 from "$lib/Gcore/Gcode/Gnative/Gfunctionalities/Gmove/G1moveSlow/G1moveSlow.svelte";
