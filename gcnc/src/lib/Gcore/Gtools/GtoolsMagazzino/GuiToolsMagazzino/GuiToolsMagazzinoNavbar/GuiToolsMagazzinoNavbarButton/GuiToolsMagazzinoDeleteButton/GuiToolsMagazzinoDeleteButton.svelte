@@ -1,6 +1,6 @@
 <script lang="ts">
-  import GuiButton from "$lib/GuiComponents/GuiButton/GuiButton.svelte";
-  import GtoolsStore from "../../../../../../../../database/Gtools/GtoolsStore";
+  import GuiButton from "$Gui/GuiButton/GuiButton.svelte";
+  import GtoolsStore from "$database/Gtools/GtoolsStore";
 
   $: isAtLeastOneChecked = $GtoolsStore.some((obj) => obj.isEditChecked);
   $: totalItemsChecked = $GtoolsStore.filter((obj) => obj.isEditChecked).length;

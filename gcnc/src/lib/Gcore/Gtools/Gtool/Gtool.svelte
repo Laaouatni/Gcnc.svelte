@@ -1,10 +1,10 @@
 <script lang="ts">
-  import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
-  import type GtoolInterface from "../../../../database/Gtools/GtoolInterface";
+  import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
+  import type GtoolInterface from "$database/Gtools/GtoolInterface";
   import GtoolKey from "./GtoolKey/GtoolKey.svelte";
   import GtoolValue from "./GtoolValue/GtoolValue.svelte";
 
-  import GtoolsStore from "../../../../database/Gtools/GtoolsStore";
+  import GtoolsStore from "$database/Gtools/GtoolsStore";
   import GtoolEditCheckbox from "./GtoolEdit/GtoolEditCheckbox/GtoolEditCheckbox.svelte";
 
   export let toolObjData: GtoolInterface;

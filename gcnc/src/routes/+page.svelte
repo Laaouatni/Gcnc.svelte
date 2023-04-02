@@ -1,7 +1,7 @@
 <script lang="ts">
-  import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
+  import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 
-  import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
+  import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
 
   const pages = import.meta.glob("./devDemo/**/+page.svelte");
 

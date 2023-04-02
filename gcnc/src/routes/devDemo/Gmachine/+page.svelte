@@ -1,6 +1,6 @@
 <script lang="ts">
-  import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
-  import GmachineStore from "../../../database/Gmachine/GmachineStore";
+  import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
+  import GmachineStore from "$database/Gmachine/GmachineStore";
 </script>
 
 <GuiTitle Gtitle="machine" />

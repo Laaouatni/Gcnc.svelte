@@ -3,7 +3,7 @@
 
   import GtoolsWarehouse from "$lib/Gcore/Gtools/GtoolsMagazzino/GtoolsMagazzino.svelte";
   import GuiToolsMagazzinoNavbar from "$lib/Gcore/Gtools/GtoolsMagazzino/GuiToolsMagazzino/GuiToolsMagazzinoNavbar/GuiToolsMagazzinoNavbar.svelte";
-  import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
+  import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
   
   let GtoolsPageContainer: HTMLElement;
   

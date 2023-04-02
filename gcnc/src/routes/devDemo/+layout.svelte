@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
   import { slide } from "svelte/transition";
 
-  import GuiPageNav from "$lib/GuiComponents/GuiPageNav/GuiPageNav.svelte";
+  import GuiPageNav from "$Gui/GuiPageNav/GuiPageNav.svelte";
 
   class Gpage {
     GpageName: string;

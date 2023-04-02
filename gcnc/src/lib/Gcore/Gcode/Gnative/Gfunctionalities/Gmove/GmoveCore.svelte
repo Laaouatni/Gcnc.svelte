@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GuiCard from "$lib/GuiComponents/GuiCard/GuiCard.svelte";
+  import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
   import GparametersContainer from "../../GuiSyntax/Gparameters/GparametersContainer/GparametersContainer.svelte";
 
   export let positionXYZ: {x: number, y: number, z: number};

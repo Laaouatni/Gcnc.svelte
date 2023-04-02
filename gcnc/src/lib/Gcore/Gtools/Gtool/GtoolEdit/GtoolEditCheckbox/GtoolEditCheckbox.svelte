@@ -1,6 +1,6 @@
 <script lang="ts">
-  import GtoolsStore from "../../../../../../database/Gtools/GtoolsStore";
-  import type GtoolInterface from "../../../../../../database/Gtools/GtoolInterface";
+  import GtoolsStore from "$database/Gtools/GtoolsStore";
+  import type GtoolInterface from "$database/Gtools/GtoolInterface";
   
   export let GtoolId: number;
   export let isGtoolChecked: boolean = false;

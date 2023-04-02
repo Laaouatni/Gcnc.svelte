@@ -1,5 +1,5 @@
 <script>
-  import GuiTitle from "$lib/GuiComponents/GuiTitle/GuiTitle.svelte";
+  import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 </script>
 
 <GuiTitle Gtitle="G1 codes" />
