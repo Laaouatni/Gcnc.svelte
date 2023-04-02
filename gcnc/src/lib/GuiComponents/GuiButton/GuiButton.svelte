@@ -1,25 +1,31 @@
 <script lang="ts">
-  import twColors from "tailwindcss/colors";
+  import { scale } from 'svelte/transition'
+  import twColors from 'tailwindcss/colors'
 
-  export let Gcolor: string;
+  export let Gcolor: string
 
-  let hexColor: string = "";
+  let hexColor: string = ''
 
   $: {
-    const [key, value] = Gcolor.split("-");
+    const [key, value] = Gcolor.split('-')
 
     // @ts-ignore
-    hexColor = twColors[key][value];
+    hexColor = twColors[key][value]
   }
 </script>
 
+<style>
+  button {
+    --tw-shadow-color: var(--hex-color);
+    background-color: var(--hex-color);
+  }
+</style>
+
 <button
   on:click
-  style={`
-    --tw-shadow-color: ${hexColor};
-    background-color: ${hexColor};
-  `}
-  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition active:scale-[0.99]"
->
+  style="--hex-color: {hexColor};"
+  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold
+  uppercase transition active:scale-[0.99]"
+  transition:scale>
   <slot />
 </button>

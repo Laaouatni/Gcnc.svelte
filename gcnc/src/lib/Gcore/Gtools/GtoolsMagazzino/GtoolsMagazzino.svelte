@@ -1,7 +1,7 @@
 <script lang="ts">
-  import GuiGridColResponsiveContainer from "$Gui/GuiGridColResponsiveContainer/GuiGridColResponsiveContainer.svelte";
-  import GtoolsStore from "$database/Gtools/GtoolsStore";
-  import Gtool from "../Gtool/Gtool.svelte";
+  import GuiGridColResponsiveContainer from '$Gui/GuiGridColResponsiveContainer/GuiGridColResponsiveContainer.svelte'
+  import GtoolsStore from '$database/Gtools/GtoolsStore'
+  import Gtool from '../Gtool/Gtool.svelte'
 </script>
 
 <GuiGridColResponsiveContainer>
