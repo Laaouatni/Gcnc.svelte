@@ -5,6 +5,7 @@ not completed, just a idea... but basically I want to create a new way to code G
 meanwhile the development code is in another [`github branch`](https://github.com/Laaouatni/Gcnc.svelte/tree/development) called development
 
 ```mermaid
+%%{init: {'theme':'neutral'}}%%
 gitGraph
     commit id:"initial commit"
     
