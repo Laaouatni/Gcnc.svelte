@@ -15,7 +15,8 @@ const config = {
 		alias: {
 			$src: './src',
 			$database: './src/database',
-			$Gui: "./src/lib/GuiComponents"
+			$Gui: "./src/lib/GuiComponents",
+			$assets: "./src/lib/Gassets"
 		}
 	}
 };
