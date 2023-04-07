@@ -1,18 +1,16 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { slide } from "svelte/transition";
+  import { fly } from "svelte/transition";
 
   import GuiPageNav from "$Gui/GuiPageNav/GuiPageNav.svelte";
 
   class Gpage {
     GpageName: string;
     GpageRoute: string;
-    GpagePrefix: string;
 
     constructor(GpageName: string) {
       this.GpageName = GpageName;
-      this.GpagePrefix = "devDemo";
-      this.GpageRoute = `/${this.GpagePrefix}/${this.GpageName}`;
+      this.GpageRoute = `/devDemo/${this.GpageName}`;
     }
   }
 
@@ -29,8 +27,8 @@
 
 {#key $page.route}
   <main
-    in:slide
-    class="fixed w-full overflow-auto p-4"
+    in:fly={{ x: navWidth }}
+    class="fixed w-full h-screen overflow-auto p-4"
     style="--nav-width: {navWidth}px;"
   >
     <slot />

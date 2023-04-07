@@ -1,7 +1,7 @@
 <script lang="ts">
   export let Gsrc: string;
 
-  $: svgRoute = Gsrc.replace(".svg", ".svg?raw");
+  $: svgRoute = `${Gsrc}?raw`;
 </script>
 
 {#await import(svgRoute)}

@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/container-queries')
+    // require('@tailwindcss/container-queries'),
+    // require('@tailwindcss/typography')
   ],
 }
