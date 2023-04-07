@@ -1,7 +1,10 @@
 <!--
   @component
   ## To make this work:
-  - You MUST SET `peer` tailwind class, to the previous html element manually
+  You MUST SET `peer` tailwind class, to the previous html element manually
+
+  ### Notes:
+  you may need to style your parent element by adding `flex flex-row-reverse`, add some `gap` and so on... because this component is just a tooltip, not a container
 -->
 
 <span
