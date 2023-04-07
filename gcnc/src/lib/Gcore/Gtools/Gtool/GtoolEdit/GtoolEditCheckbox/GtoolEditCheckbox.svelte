@@ -1,7 +1,8 @@
 <script lang="ts">
   import GtoolsStore from "$database/Gtools/GtoolsStore";
   import type GtoolInterface from "$database/Gtools/GtoolInterface";
-  
+  import GuiTooltipTwPeer from "$src/lib/GuiComponents/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
+
   export let GtoolId: number;
   export let isGtoolChecked: boolean = false;
 
@@ -24,10 +25,10 @@
     class="h-5 w-5 peer"
     on:click|stopPropagation
   />
-  <span class="peer-hover:opacity-90 opacity-0 peer-hover:scale-100 scale-0 transition pointer-events-none capitalize bg-white border px-4 py-2 rounded-full shadow-lg">
-    Click to 
-    <span class="font-bold">{actionStringName}</span> 
+  <GuiTooltipTwPeer>
+    Click to
+    <span class="font-bold">{actionStringName}</span>
     this tool N.
     <span class="font-bold">{GtoolId}</span>
-  </span>
+  </GuiTooltipTwPeer>
 </div>
