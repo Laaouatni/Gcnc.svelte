@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { scale } from 'svelte/transition'
-  import twColors from 'tailwindcss/colors'
+  import { scale } from "svelte/transition";
+  import twColors from "tailwindcss/colors";
 
-  export let Gcolor: string
+  export let Gcolor: string;
 
-  let hexColor: string = ''
+  let hexColor: string = "";
 
   $: {
-    const [key, value] = Gcolor.split('-')
+    const [key, value] = Gcolor.split("-");
 
     // @ts-ignore
-    hexColor = twColors[key][value]
+    hexColor = value ? twColors[key][value] : twColors[key];
   }
 </script>
 
@@ -24,8 +24,9 @@
 <button
   on:click
   style="--hex-color: {hexColor};"
-  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold
-  uppercase transition active:scale-[0.99]"
-  transition:scale>
+  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition active:scale-[0.99] relative
+  before:w-full before:h-full before:absolute before:top-0 before:left-0 hover:before:bg-black/10 overflow-hidden"
+  transition:scale
+>
   <slot />
 </button>
