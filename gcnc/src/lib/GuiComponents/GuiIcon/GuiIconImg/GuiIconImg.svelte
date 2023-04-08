@@ -1,3 +1,8 @@
+<!-- 
+  @component
+  ## notes:
+  - the `alt` attribute is set to the value of the src attribute converted to title case
+ -->
 <script lang="ts">
   import convertCaseFromSrc from "./convertCaseFromSrc";
   
