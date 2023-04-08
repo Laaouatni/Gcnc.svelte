@@ -1,4 +1,4 @@
-type toolType = "FRESA_SPIANATURA" | "PUNTA_ELICOIDALE" | "MASCHIATORE";
+type toolType = "FRESA" | "PUNTA" | "MASCHIATORE";
 type rotationDirection = "CLOCKWISE" | "COUNTERCLOCKWISE";
 
 export default interface GtoolInterface {

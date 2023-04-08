@@ -1,9 +1,11 @@
-export default [
+import type GtoolInterface from "./GtoolInterface";
+
+const GtoolsDevFakeData: GtoolInterface[] = [
   {
     id: 1,
     diameter: 50,
     numberTeeth: 4,
-    type: "FRESA_SPIANATURA",
+    type: "FRESA",
     nameDescription: "Fresa spianatrice 50mm",
     angle: 90,
     length: 100,
@@ -23,8 +25,8 @@ export default [
     id: 2,
     diameter: 8,
     numberTeeth: 4,
-    type: "PUNTA_ELICOIDALE",
-    nameDescription: "Punta elicoidale 8mm",
+    type: "PUNTA",
+    nameDescription: "Punta 8mm",
     angle: 118,
     length: 60,
     feedPerTeeth: 0.1,
@@ -63,7 +65,7 @@ export default [
     id: 4,
     diameter: 20,
     numberTeeth: 4,
-    type: "FRESA_SPIANATURA",
+    type: "FRESA",
     nameDescription: "Fresa spianatrice 20mm",
     angle: 90,
     length: 60,
@@ -83,8 +85,8 @@ export default [
     id: 5,
     diameter: 3,
     numberTeeth: 2,
-    type: "PUNTA_ELICOIDALE",
-    nameDescription: "Punta elicoidale 3mm",
+    type: "PUNTA",
+    nameDescription: "Punta 3mm",
     angle: 130,
     length: 30,
     feedPerTeeth: 0.05,
@@ -103,7 +105,7 @@ export default [
     id: 6,
     diameter: 12,
     numberTeeth: 4,
-    type: "FRESA_SPIANATURA",
+    type: "FRESA",
     nameDescription: "Fresa spianatrice 12mm",
     angle: 90,
     length: 40,
@@ -123,8 +125,8 @@ export default [
     id: 7,
     diameter: 5,
     numberTeeth: 2,
-    type: "PUNTA_ELICOIDALE",
-    nameDescription: "Punta elicoidale 5mm",
+    type: "PUNTA",
+    nameDescription: "Punta 5mm",
     angle: 118,
     length: 40,
     feedPerTeeth: 0.08,
@@ -143,7 +145,7 @@ export default [
     id: 8,
     diameter: 8,
     numberTeeth: 4,
-    type: "FRESA_SPIANATURA",
+    type: "FRESA",
     nameDescription: "Fresa spianatrice 8mm",
     angle: 90,
     length: 30,
@@ -160,3 +162,5 @@ export default [
     isEditChecked: false,
   },
 ];
+
+export default GtoolsDevFakeData;
