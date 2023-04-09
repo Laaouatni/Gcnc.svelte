@@ -1,10 +1,14 @@
 <script lang="ts">
   import GuiButton from "$Gui/GuiButton/GuiButton.svelte";
 
-  export let GisPopupOpen: boolean;
+  import { handleOpen } from "$Gui/GuiPopup/GuiPopup.svelte";
+  import { goto } from "$app/navigation";
+
+  const URL = "/devDemo/Gtools/edit";
 
   function handleClick() {
-    GisPopupOpen = true;
+    goto(URL);
+    handleOpen();
   }
 </script>
 

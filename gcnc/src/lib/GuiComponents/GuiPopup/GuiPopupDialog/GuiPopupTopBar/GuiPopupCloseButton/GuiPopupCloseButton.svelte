@@ -1,12 +1,12 @@
 <script lang="ts">
   import GiconX from "$assets/icons/svg/GiconX.svg";
   import GuiIcon from "$Gui/GuiIcon/GuiIcon.svelte";
-  import GuiTooltipTwPeer from "$src/lib/GuiComponents/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
+  import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
-  export let GisPopupOpen: boolean;
+  import { handleClose } from "$Gui/GuiPopup/GuiPopup.svelte";
 
   function handleClick() {
-    GisPopupOpen = false;
+    handleClose();
   }
 </script>
 

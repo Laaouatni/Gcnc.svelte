@@ -1,5 +1,5 @@
 type toolType = "FRESA" | "PUNTA" | "MASCHIATORE";
-type rotationDirection = "CLOCKWISE" | "COUNTERCLOCKWISE";
+type rotationDirection = "ORARIO" | "ANTIORARIO";
 
 export default interface GtoolInterface {
   id: number;

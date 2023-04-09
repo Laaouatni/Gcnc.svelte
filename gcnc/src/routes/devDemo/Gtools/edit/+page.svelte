@@ -9,7 +9,6 @@
   handleOpen();
 </script>
 
-<!-- test commit -->
 <Page>
   <GuiPopup>
     <GtoolEditPopupSteps />
