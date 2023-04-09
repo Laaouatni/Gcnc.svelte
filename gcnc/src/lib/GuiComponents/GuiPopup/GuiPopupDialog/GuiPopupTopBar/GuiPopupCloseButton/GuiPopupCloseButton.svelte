@@ -3,10 +3,10 @@
   import GuiIcon from "$Gui/GuiIcon/GuiIcon.svelte";
   import GuiTooltipTwPeer from "$src/lib/GuiComponents/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
-  import { handleClose } from "$Gui/GuiPopup/GuiPopup.svelte";
+  export let GisPopupOpen: boolean;
 
   function handleClick() {
-    handleClose();
+    GisPopupOpen = false;
   }
 </script>
 

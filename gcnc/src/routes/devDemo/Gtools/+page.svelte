@@ -4,8 +4,11 @@
   import GtoolsWarehouse from "$lib/Gcore/Gtools/GtoolsMagazzino/GtoolsMagazzino.svelte";
   import GuiToolsMagazzinoNavbar from "$lib/Gcore/Gtools/GtoolsMagazzino/GuiToolsMagazzino/GuiToolsMagazzinoNavbar/GuiToolsMagazzinoNavbar.svelte";
   import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
+  import GuiPopup from "$src/lib/GuiComponents/GuiPopup/GuiPopup.svelte";
   
   let GtoolsPageContainer: HTMLElement;
+
+  let GisPopupOpen = false;
   
   onMount(() => {
     GtoolsPageContainer!.parentElement!.style.padding = "0px";
@@ -18,7 +21,7 @@
     <GtoolsWarehouse />
   </div>
 
-  <GuiToolsMagazzinoNavbar />
+  <GuiToolsMagazzinoNavbar bind:GisPopupOpen />
 
-  <slot />
+  <GuiPopup bind:GisPopupOpen />
 </div>
