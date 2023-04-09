@@ -12,7 +12,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.2,
     spindleSpeed: 3000,
     needsCoolant: true,
-    rotationDirection: "COUNTERCLOCKWISE",
+    rotationDirection: "ANTIORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -32,7 +32,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.1,
     spindleSpeed: 8000,
     needsCoolant: false,
-    rotationDirection: "CLOCKWISE",
+    rotationDirection: "ORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -52,7 +52,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.01,
     spindleSpeed: 1500,
     needsCoolant: true,
-    rotationDirection: "CLOCKWISE",
+    rotationDirection: "ORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -72,7 +72,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.1,
     spindleSpeed: 5000,
     needsCoolant: true,
-    rotationDirection: "CLOCKWISE",
+    rotationDirection: "ORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -92,7 +92,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.05,
     spindleSpeed: 12000,
     needsCoolant: false,
-    rotationDirection: "COUNTERCLOCKWISE",
+    rotationDirection: "ANTIORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -112,7 +112,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.15,
     spindleSpeed: 4000,
     needsCoolant: true,
-    rotationDirection: "CLOCKWISE",
+    rotationDirection: "ORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -132,7 +132,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.08,
     spindleSpeed: 10000,
     needsCoolant: true,
-    rotationDirection: "COUNTERCLOCKWISE",
+    rotationDirection: "ANTIORARIO",
     compensation: {
       x: 0,
       y: 0,
@@ -152,7 +152,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     feedPerTeeth: 0.05,
     spindleSpeed: 6000,
     needsCoolant: false,
-    rotationDirection: "CLOCKWISE",
+    rotationDirection: "ORARIO",
     compensation: {
       x: 0,
       y: 0,

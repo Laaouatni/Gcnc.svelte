@@ -1,7 +1,6 @@
 <script lang="ts">
   import GuiButton from "$Gui/GuiButton/GuiButton.svelte";
   import GtoolsStore from "$database/Gtools/GtoolsStore";
-  import { scale } from "svelte/transition";
 
   $: isAtLeastOneChecked = $GtoolsStore.some((obj) => obj.isEditChecked);
   $: totalItemsChecked = $GtoolsStore.filter((obj) => obj.isEditChecked).length;
