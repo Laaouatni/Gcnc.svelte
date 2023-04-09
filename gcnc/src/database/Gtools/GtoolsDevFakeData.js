@@ -1,11 +1,9 @@
-import type GtoolInterface from "./GtoolInterface";
-
-const GtoolsDevFakeData: GtoolInterface[] = [
+export default [
   {
     id: 1,
     diameter: 50,
     numberTeeth: 4,
-    type: "FRESA",
+    type: "FRESA_SPIANATURA",
     nameDescription: "Fresa spianatrice 50mm",
     angle: 90,
     length: 100,
@@ -25,8 +23,8 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 2,
     diameter: 8,
     numberTeeth: 4,
-    type: "PUNTA",
-    nameDescription: "Punta 8mm",
+    type: "PUNTA_ELICOIDALE",
+    nameDescription: "Punta elicoidale 8mm",
     angle: 118,
     length: 60,
     feedPerTeeth: 0.1,
@@ -65,7 +63,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 4,
     diameter: 20,
     numberTeeth: 4,
-    type: "FRESA",
+    type: "FRESA_SPIANATURA",
     nameDescription: "Fresa spianatrice 20mm",
     angle: 90,
     length: 60,
@@ -85,8 +83,8 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 5,
     diameter: 3,
     numberTeeth: 2,
-    type: "PUNTA",
-    nameDescription: "Punta 3mm",
+    type: "PUNTA_ELICOIDALE",
+    nameDescription: "Punta elicoidale 3mm",
     angle: 130,
     length: 30,
     feedPerTeeth: 0.05,
@@ -105,7 +103,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 6,
     diameter: 12,
     numberTeeth: 4,
-    type: "FRESA",
+    type: "FRESA_SPIANATURA",
     nameDescription: "Fresa spianatrice 12mm",
     angle: 90,
     length: 40,
@@ -125,8 +123,8 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 7,
     diameter: 5,
     numberTeeth: 2,
-    type: "PUNTA",
-    nameDescription: "Punta 5mm",
+    type: "PUNTA_ELICOIDALE",
+    nameDescription: "Punta elicoidale 5mm",
     angle: 118,
     length: 40,
     feedPerTeeth: 0.08,
@@ -145,7 +143,7 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     id: 8,
     diameter: 8,
     numberTeeth: 4,
-    type: "FRESA",
+    type: "FRESA_SPIANATURA",
     nameDescription: "Fresa spianatrice 8mm",
     angle: 90,
     length: 30,
@@ -162,5 +160,3 @@ const GtoolsDevFakeData: GtoolInterface[] = [
     isEditChecked: false,
   },
 ];
-
-export default GtoolsDevFakeData;

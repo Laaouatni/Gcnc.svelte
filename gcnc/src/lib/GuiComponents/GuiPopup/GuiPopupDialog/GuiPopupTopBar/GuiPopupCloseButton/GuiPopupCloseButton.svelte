@@ -1,7 +1,7 @@
 <script lang="ts">
   import GiconX from "$assets/icons/svg/GiconX.svg";
   import GuiIcon from "$Gui/GuiIcon/GuiIcon.svelte";
-  import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
+  import GuiTooltipTwPeer from "$src/lib/GuiComponents/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
   import { handleClose } from "$Gui/GuiPopup/GuiPopup.svelte";
 
