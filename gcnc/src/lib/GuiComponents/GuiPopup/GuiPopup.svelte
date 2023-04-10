@@ -1,27 +1,23 @@
-<script context="module" lang="ts">
-  let GisPopupOpen: boolean = false;
-
-  export function handleClose() {
-    GisPopupOpen = false;
-    console.log("handleClose", GisPopupOpen)
-  }
-
-  export function handleOpen() {
-    GisPopupOpen = true;
-    console.log("handleOpen", GisPopupOpen)
-  }
-</script>
-
 <script lang="ts">
   import GuiPopupDialog from "./GuiPopupDialog/GuiPopupDialog.svelte";
+  
   import { fade } from "svelte/transition";
+
+  export let GisPopupOpen: boolean;
+  export let GonPopupClosed: () => void = () => {};
+
+  $: if(!GisPopupOpen) GonPopupClosed();
+
+  function handleClose() {
+    GisPopupOpen = false;
+  }
 
   function handleClick() {
     handleClose();
   }
 
   function handleKeyUp(e: KeyboardEvent) {
-    if (!GisPopupOpen) return;
+    if(!GisPopupOpen) return;
     if (e.key === "Escape") handleClose();
   }
 </script>
@@ -34,8 +30,6 @@
     class="absolute w-full h-screen overflow-auto outline grid place-items-center backdrop-blur-sm bg-black/50 p-4"
     on:click|self={handleClick}
   >
-    <GuiPopupDialog>
-      <slot />
-    </GuiPopupDialog>
+    <GuiPopupDialog bind:GisPopupOpen></GuiPopupDialog>
   </div>
 {/if}
