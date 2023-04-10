@@ -10,12 +10,16 @@
   let GtoolsPageContainer: HTMLElement;
 
   onMount(() => {
-    GtoolsPageContainer!.parentElement!.style.padding = "0px";
+    if (GtoolsPageContainer && GtoolsPageContainer.parentElement) {
+      GtoolsPageContainer.parentElement.style.padding = "0px";
+    }
   });
 
   onDestroy(() => {
-    // @ts-ignore
-    GtoolsPageContainer!.parentElement!.style.padding = null;
+    if (GtoolsPageContainer && GtoolsPageContainer.parentElement) {
+      // @ts-ignore
+      GtoolsPageContainer.parentElement.style.padding = null
+    }
   });
 </script>
 

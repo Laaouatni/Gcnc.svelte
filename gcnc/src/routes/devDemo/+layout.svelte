@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { page } from "$app/stores";
-  import { fade, fly, scale } from "svelte/transition";
+  import { navigating } from "$app/stores";
+  import { fly } from "svelte/transition";
   import { elasticInOut, elasticOut } from "svelte/easing";
 
   import GuiPageNav from "$Gui/GuiPageNav/GuiPageNav.svelte";
@@ -28,18 +28,20 @@
 
 <GuiPageNav GpagesArray={navigationArray} bind:navWidth />
 
-{#key $page.route}
-  <main
-    transition:fly={{
-      y: window.innerHeight,
-      duration: SECOND_TIME * 1.7,
-      easing: elasticInOut,
-    }}
-    class="fixed w-full h-screen overflow-auto p-4 bg-white"
-    style="--nav-width: {navWidth}px;"
-  >
-    <slot />
-  </main>
+{#key $navigating}
+  {#if !$navigating}
+    <main
+      transition:fly={{
+        x: window.innerWidth - navWidth,
+        duration: SECOND_TIME * 2,
+        easing: elasticInOut,
+      }}
+      class="fixed w-full h-screen overflow-auto p-4 bg-white"
+      style="--nav-width: {navWidth}px;"
+    >
+      <slot />
+    </main>
+  {/if}
 {/key}
 
 <style>

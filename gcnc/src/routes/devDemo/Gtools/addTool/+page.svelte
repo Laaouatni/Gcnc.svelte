@@ -5,7 +5,6 @@
   import GtoolsPopupIsOpen from "$database/Gtools/GtoolsPopupStore";
 
   function handlePopupClosed() {
-    console.log("handlePopupClosed");
     goto("/devDemo/Gtools/");
   }
 </script>
