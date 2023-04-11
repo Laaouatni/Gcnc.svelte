@@ -2,16 +2,10 @@
   import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 
   import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
+  import retrievePageDataFromImportMetaGlob from "$assets/scripts/retrievePageDataFromImportMetaGlob";
 
-  const pages = import.meta.glob("./devDemo/**/+page.svelte");
-
-  const pageLinks = Object.entries(pages).map(([path]) => {
-    const pagePath = path.replace("./", "").replace("/+page.svelte", "");
-    return {
-      path: `/${pagePath}`,
-      name: pagePath.charAt(0).toUpperCase() + pagePath.slice(1),
-    };
-  });
+  const pages = import.meta.glob("./devDemo/*/+page.svelte");
+  const pageLinks = retrievePageDataFromImportMetaGlob(pages);
 </script>
 
 <div class="flex h-screen flex-col p-4">

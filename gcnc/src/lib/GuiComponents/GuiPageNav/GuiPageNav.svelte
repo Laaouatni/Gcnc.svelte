@@ -1,7 +1,7 @@
 <script lang="ts">
   import GuiPageNavItems from "./GuiPageNavItems/GuiPageNavItems.svelte";
 
-  export let GpagesArray: { GpageName: string; GpageRoute: string }[];
+  export let GpagesArray: Record<"GpageName" | "GpageRoute", string>[];
 
   export let navWidth: number;
 </script>

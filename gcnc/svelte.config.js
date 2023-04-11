@@ -17,6 +17,9 @@ const config = {
 			$database: './src/database',
 			$Gui: "./src/lib/GuiComponents",
 			$assets: "./src/lib/Gassets"
+		},
+		output: {
+			preloadStrategy: "preload-mjs"
 		}
 	}
 };

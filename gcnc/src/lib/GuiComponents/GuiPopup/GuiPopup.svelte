@@ -2,11 +2,12 @@
   import GuiPopupDialog from "./GuiPopupDialog/GuiPopupDialog.svelte";
   
   import { fade } from "svelte/transition";
+  import { browser } from "$app/environment";
 
   export let GisPopupOpen: boolean;
   export let GonPopupClosed: () => void = () => {};
 
-  $: if(!GisPopupOpen) GonPopupClosed();
+  $: if(!GisPopupOpen && browser) GonPopupClosed();
 
   function handleClose() {
     GisPopupOpen = false;
@@ -26,8 +27,8 @@
 
 {#if GisPopupOpen}
   <div
-    transition:fade
-    class="absolute w-full h-screen overflow-auto outline grid place-items-center backdrop-blur-sm bg-black/50 p-4"
+    transition:fade|local
+    class="absolute w-full h-screen overflow-auto outline grid place-items-center backdrop-blur-sm bg-black/60 p-4"
     on:click|self={handleClick}
   >
     <GuiPopupDialog bind:GisPopupOpen></GuiPopupDialog>
