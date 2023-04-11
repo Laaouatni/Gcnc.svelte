@@ -24,7 +24,7 @@
 <button
   on:click
   style="--hex-color: {hexColor};"
-  class="flex-1 shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition active:scale-[0.99] relative
+  class="w-full shadow-lg shadow-inherit rounded-lg p-4 text-white font-semibold uppercase transition active:scale-[0.99] relative
   before:w-full before:h-full before:absolute before:top-0 before:left-0 hover:before:bg-black/10 overflow-hidden"
   transition:scale
 >

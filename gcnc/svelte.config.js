@@ -13,14 +13,11 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			$src: './src',
-			$database: './src/database',
+			// $Gsrc: './src',
+			$Gdatabase: './src/database',
 			$Gui: "./src/lib/GuiComponents",
-			$assets: "./src/lib/Gassets"
+			$Gassets: "./src/lib/Gassets"
 		},
-		output: {
-			preloadStrategy: "preload-mjs"
-		}
 	}
 };
 

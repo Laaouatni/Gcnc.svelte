@@ -1,7 +1,7 @@
 <script lang="ts">
-  import GtoolsStore from "$database/Gtools/GtoolsStore";
-  import type GtoolInterface from "$database/Gtools/GtoolInterface";
-  import GuiTooltipTwPeer from "$src/lib/GuiComponents/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
+  import GtoolsStore from "$Gdatabase/Gtools/GtoolsStore";
+  import type GtoolInterface from "$Gdatabase/Gtools/GtoolInterface";
+  import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
   export let GtoolId: number;
   export let isGtoolChecked: boolean = false;

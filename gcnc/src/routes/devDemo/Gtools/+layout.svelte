@@ -5,7 +5,7 @@
   import GuiToolsMagazzinoNavbar from "$lib/Gcore/Gtools/GtoolsMagazzino/GuiToolsMagazzino/GuiToolsMagazzinoNavbar/GuiToolsMagazzinoNavbar.svelte";
   import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 
-  import GtoolsPopupIsOpen from "$database/Gtools/GtoolsPopupStore";
+  import GtoolsPopupIsOpen from "$Gdatabase/Gtools/GtoolsPopupStore";
 
   let GtoolsPageContainer: HTMLElement;
 
@@ -18,7 +18,7 @@
   onDestroy(() => {
     if (GtoolsPageContainer && GtoolsPageContainer.parentElement) {
       // @ts-ignore
-      GtoolsPageContainer.parentElement.style.padding = null
+      GtoolsPageContainer.parentElement.style.padding = null;
     }
   });
 </script>

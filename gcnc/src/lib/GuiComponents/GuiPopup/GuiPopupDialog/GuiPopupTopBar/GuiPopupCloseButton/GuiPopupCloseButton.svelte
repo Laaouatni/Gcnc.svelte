@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GiconX from "$assets/icons/svg/GiconX.svg";
+  import GiconX from "$Gassets/icons/svg/GiconX.svg";
   import GuiIcon from "$Gui/GuiIcon/GuiIcon.svelte";
   import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 

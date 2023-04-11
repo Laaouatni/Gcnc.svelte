@@ -2,7 +2,7 @@
   import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 
   import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
-  import retrievePageDataFromImportMetaGlob from "$assets/scripts/retrievePageDataFromImportMetaGlob";
+  import retrievePageDataFromImportMetaGlob from "$Gassets/scripts/retrievePageDataFromImportMetaGlob/retrievePageDataFromImportMetaGlob";
 
   const pages = import.meta.glob("./devDemo/*/+page.svelte");
   const pageLinks = retrievePageDataFromImportMetaGlob(pages);

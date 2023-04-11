@@ -31,6 +31,8 @@
     class="absolute w-full h-screen overflow-auto outline grid place-items-center backdrop-blur-sm bg-black/60 p-4"
     on:click|self={handleClick}
   >
-    <GuiPopupDialog bind:GisPopupOpen></GuiPopupDialog>
+    <GuiPopupDialog bind:GisPopupOpen>
+      <slot></slot>
+    </GuiPopupDialog>
   </div>
 {/if}
