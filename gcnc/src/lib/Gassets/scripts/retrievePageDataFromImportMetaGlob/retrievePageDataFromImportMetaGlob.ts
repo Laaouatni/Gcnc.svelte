@@ -1,6 +1,10 @@
 export default retrievePageDataFromImportMetaGlob;
 
+import { get } from "svelte/store";
 import removeDuplicateRoutes from "./replaceDuplicateRoutes/replaceDuplicateRoutes";
+
+import type { Page } from "@sveltejs/kit";
+import { page } from "$app/stores";
 
 // Record<string, () => Promise<unknown>>
 //
@@ -17,26 +21,20 @@ export type ImportMetaGlobObjType = Record<string, () => Promise<any>>;
 
 function retrievePageDataFromImportMetaGlob(
   ImportMetaGlobObj: ImportMetaGlobObjType,
-  optionsObj?: {
-    thisPageRouteId?: string; // always put "$page.route.id" here. remember to also add ! at the end. so it will be "$page.route.id!"
-  },
 ) {
   const filesRouteKeyArray = Object.keys(ImportMetaGlobObj);
+  const thisPageData: Page = get(page);
 
   return filesRouteKeyArray.map((path) => {
     const realPagePath = (path: string) => {
       const result = path.replace("/+page.svelte", "");
 
-      if (optionsObj?.thisPageRouteId) {
-        return removeDuplicateRoutes({
-          longRoute: optionsObj.thisPageRouteId,
-          shortRoute: result,
-        });
-      }
-
-      return result;
+      return removeDuplicateRoutes({
+        longRoute: thisPageData.route.id!,
+        shortRoute: result,
+      });
     };
-    
+
     const pageName = realPagePath(path).replace("./", "").split("/").pop();
 
     return {
