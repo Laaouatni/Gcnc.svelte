@@ -1,7 +1,4 @@
 <script lang="ts">
-  import { goto } from "$app/navigation";
-  import { page } from "$app/stores";
-
   import {
     default as retrievePageDataFromImportMetaGlob,
     type ImportMetaGlobObjType,
@@ -10,16 +7,23 @@
   export let GimportMetaGlobObj: ImportMetaGlobObjType;
 
   import GuiButton from "$Gui/GuiButton/GuiButton.svelte";
+  import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
-  const pagesData = retrievePageDataFromImportMetaGlob(GimportMetaGlobObj, {
-    thisPageRouteId: $page.route.id!,
-  });
+  const pagesData = retrievePageDataFromImportMetaGlob(GimportMetaGlobObj);
 </script>
 
-<nav class="flex flex-wrap gap-4">
+<!-- !todo: use https://floating-ui.com/docs/tutorial instead DELETE EVERYTHING HERE and correct things -->
+<nav class="grid grid-flow-col gap-4 border p-4">
   {#each pagesData as thisPageData}
-    <GuiButton Gcolor="blue-400" on:click={() => goto(thisPageData.path)}>
-      {thisPageData.name}
-    </GuiButton>
+    <!-- <div class="relative"> -->
+      <a class="border grid place-items-center peer p-4 min-w-[4rem] min-h-[4rem] rounded-lg shadow-md text-2xl" href={thisPageData.path}>
+        {thisPageData.name?.charAt(0)}
+      </a>
+      <!-- <div class="absolute top-0 left-0">
+        <GuiTooltipTwPeer>
+          {thisPageData.name}
+        </GuiTooltipTwPeer>
+      </div>
+    </div> -->
   {/each}
 </nav>

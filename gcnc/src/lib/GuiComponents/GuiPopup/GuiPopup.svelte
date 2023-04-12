@@ -1,13 +1,13 @@
 <script lang="ts">
   import GuiPopupDialog from "./GuiPopupDialog/GuiPopupDialog.svelte";
-  
+
   import { fade } from "svelte/transition";
   import { browser } from "$app/environment";
 
   export let GisPopupOpen: boolean;
   export let GonPopupClosed: () => void = () => {};
 
-  $: if(!GisPopupOpen && browser) GonPopupClosed();
+  $: if (!GisPopupOpen && browser) GonPopupClosed();
 
   function handleClose() {
     GisPopupOpen = false;
@@ -18,7 +18,7 @@
   }
 
   function handleKeyUp(e: KeyboardEvent) {
-    if(!GisPopupOpen) return;
+    if (!GisPopupOpen) return;
     if (e.key === "Escape") handleClose();
   }
 </script>
@@ -32,7 +32,7 @@
     on:click|self={handleClick}
   >
     <GuiPopupDialog bind:GisPopupOpen>
-      <slot></slot>
+      <slot />
     </GuiPopupDialog>
   </div>
 {/if}
