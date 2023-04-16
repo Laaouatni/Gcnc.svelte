@@ -1,13 +1,13 @@
 <script lang="ts">
   import GuiCard from "$Gui/GuiCard/GuiCard.svelte";
-  import type GtoolInterface from "$Gdatabase/Gtools/GtoolInterface";
+  import type TypeGtool from "$Gdatabase/Gtools/types/TypeGtool";
   import GtoolKey from "./GtoolKey/GtoolKey.svelte";
   import GtoolValue from "./GtoolValue/GtoolValue.svelte";
 
-  import GtoolsStore from "$Gdatabase/Gtools/GtoolsStore";
+  import GtoolsStore from "$Gdatabase/Gtools/stores/StoreGtools";
   import GtoolEditCheckbox from "./GtoolEdit/GtoolEditCheckbox/GtoolEditCheckbox.svelte";
 
-  export let toolObjData: GtoolInterface;
+  export let toolObjData: TypeGtool;
   export let isGtoolActive: boolean = false;
 
   $: isGtoolActive = toolObjData.isActived;

@@ -1,6 +1,6 @@
-import type GtoolInterface from "./GtoolInterface";
+import type TypeGtool from "./types/TypeGtool";
 
-const GtoolsDevFakeData: GtoolInterface[] = [
+const GtoolsDevFakeData: TypeGtool[] = [
   {
     id: 1,
     diameter: 50,

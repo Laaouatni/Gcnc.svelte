@@ -1,12 +1,12 @@
 <script lang="ts">
-  import GtoolsStore from "$Gdatabase/Gtools/GtoolsStore";
-  import type GtoolInterface from "$Gdatabase/Gtools/GtoolInterface";
+  import GtoolsStore from "$Gdatabase/Gtools/stores/StoreGtools";
+  import type TypeGtool from "$Gdatabase/Gtools/types/TypeGtool";
   import GuiTooltipTwPeer from "$Gui/GuiTooltipTwPeer/GuiTooltipTwPeer.svelte";
 
   export let GtoolId: number;
   export let isGtoolChecked: boolean = false;
 
-  $: GtoolsStore.update((Gtools: GtoolInterface[]) => {
+  $: GtoolsStore.update((Gtools: TypeGtool[]) => {
     return Gtools.map((Gtool) => {
       if (Gtool.id === GtoolId) {
         Gtool.isEditChecked = isGtoolChecked;

@@ -5,7 +5,7 @@
   import GuiToolsMagazzinoNavbar from "$lib/Gcore/Gtools/GtoolsMagazzino/GuiToolsMagazzino/GuiToolsMagazzinoNavbar/GuiToolsMagazzinoNavbar.svelte";
   import GuiTitle from "$Gui/GuiTitle/GuiTitle.svelte";
 
-  import GtoolsPopupIsOpen from "$Gdatabase/Gtools/GtoolsPopupStore";
+  import GtoolsPopupIsOpen from "$Gdatabase/Gtools/stores/StoreGtoolsPopup";
 
   let GtoolsPageContainer: HTMLElement;
 

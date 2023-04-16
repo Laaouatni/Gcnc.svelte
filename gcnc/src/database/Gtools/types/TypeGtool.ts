@@ -1,19 +1,21 @@
-type toolType = "FRESA" | "PUNTA" | "MASCHIATORE";
-type rotationDirection = "ORARIO" | "ANTIORARIO";
+type TypeTool = "FRESA" | "PUNTA" | "MASCHIATORE";
+type TypeRotationDirection = "ORARIO" | "ANTIORARIO";
 
-export default interface GtoolInterface {
+type TypeGtool = {
   id: number;
   diameter: number;
   isActived: boolean;
   isEditChecked: boolean;
   numberTeeth?: number;
-  type?: toolType;
+  type?: TypeTool;
   nameDescription?: string;
   angle?: number;
   length?: number;
   feedPerTeeth?: number;
   spindleSpeed?: number;
   needsCoolant?: boolean;
-  rotationDirection?: rotationDirection;
+  rotationDirection?: TypeRotationDirection;
   compensation?: { x: number; y: number; z: number };
-}
+};
+
+export default TypeGtool;

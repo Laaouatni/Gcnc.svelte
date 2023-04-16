@@ -3,7 +3,7 @@ export default retrievePageDataFromImportMetaGlob;
 import { get } from "svelte/store";
 import removeDuplicateRoutes from "./replaceDuplicateRoutes/replaceDuplicateRoutes";
 
-import type { Page } from "@sveltejs/kit";
+import type { Page as TypePage } from "@sveltejs/kit";
 import { page } from "$app/stores";
 
 // Record<string, () => Promise<unknown>>
@@ -17,13 +17,13 @@ import { page } from "$app/stores";
 //   string: () => Promise<unknown>,
 // }
 
-export type ImportMetaGlobObjType = Record<string, () => Promise<any>>;
+export type TypeImportMetaGlobObj = Record<string, () => Promise<any>>;
 
 function retrievePageDataFromImportMetaGlob(
-  ImportMetaGlobObj: ImportMetaGlobObjType,
+  ImportMetaGlobObj: TypeImportMetaGlobObj,
 ) {
   const filesRouteKeyArray = Object.keys(ImportMetaGlobObj);
-  const thisPageData: Page = get(page);
+  const thisPageData: TypePage = get(page);
 
   return filesRouteKeyArray.map((path) => {
     const realPagePath = (path: string) => {

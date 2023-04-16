@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import GtoolsPopupIsOpen from "$Gdatabase/Gtools/GtoolsPopupStore";
+  import GtoolsPopupIsOpen from "$Gdatabase/Gtools/stores/StoreGtoolsPopup";
 
   import GuiPopup from "$Gui/GuiPopup/GuiPopup.svelte";
   import GuiPagination from "$Gui/GuiPagination/GuiPagination.svelte";
