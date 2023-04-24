@@ -1,7 +1,8 @@
 <script lang="ts">
   import { navigating } from "$app/stores";
-  import { fly } from "svelte/transition";
-  import { elasticInOut, elasticOut } from "svelte/easing";
+  import type { Navigation as TypeNavigation } from "@sveltejs/kit";
+  import { fade, fly, scale } from "svelte/transition";
+  import { elasticInOut, elasticOut, linear } from "svelte/easing";
 
   import GuiPageNav from "$Gui/GuiPageNav/GuiPageNav.svelte";
 
@@ -24,6 +25,21 @@
   let navWidth: number;
 
   const SECOND_TIME = 1000;
+
+  let lastSavedFromToNavigating: TypeNavigation;
+
+  $: if ($navigating != null && $navigating !== lastSavedFromToNavigating) {
+    lastSavedFromToNavigating = $navigating;
+  }
+
+  const transitionToDo = (node: HTMLElement, args: object) => {
+    const lastRoute = lastSavedFromToNavigating?.to?.route?.id;
+
+    if (!lastRoute?.includes("steps")) return fly(node, args);
+    return scale(node, { ...args });
+  };
+
+  // $: console.log("lastSavedFromToNavigating", lastSavedFromToNavigating);
 </script>
 
 <GuiPageNav GpagesArray={navigationArray} bind:navWidth />
@@ -31,6 +47,18 @@
 {#key $navigating}
   {#if !$navigating}
     <main
+      transition:transitionToDo={{
+        x: window.innerWidth - navWidth,
+        duration: SECOND_TIME * 2,
+        easing: elasticOut,
+      }}
+      class="fixed w-full h-screen overflow-auto p-4 bg-white"
+      style="--nav-width: {navWidth}px;"
+    >
+      <slot />
+    </main>
+
+    <!-- <main
       transition:fly={{
         x: window.innerWidth - navWidth,
         duration: SECOND_TIME * 2,
@@ -40,7 +68,7 @@
       style="--nav-width: {navWidth}px;"
     >
       <slot />
-    </main>
+    </main> -->
   {/if}
 {/key}
 

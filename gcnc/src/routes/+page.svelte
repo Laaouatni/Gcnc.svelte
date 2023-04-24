@@ -13,8 +13,10 @@
 
   <ul class="grid h-full gap-4 text-xl">
     {#each pageLinks as { path, name }}
-      <GuiCard isActive={false}>
-        <a class="grid place-items-center text-3xl" href={path}>{name}</a>
+      <GuiCard isActive={false} Ghref={path}>
+        <!-- <a class="grid place-items-center text-3xl" href={path}> -->
+          {name}
+        <!-- </a> -->
       </GuiCard>
     {/each}
   </ul>

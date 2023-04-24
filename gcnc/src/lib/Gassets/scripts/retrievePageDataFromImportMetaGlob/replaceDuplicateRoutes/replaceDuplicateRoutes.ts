@@ -5,6 +5,8 @@ type TypeThisFunctionParameters = Record<"longRoute" | "shortRoute", string>;
 function replaceDuplicateRoutes(GobjParameters: TypeThisFunctionParameters) {
   const { longRoute, shortRoute } = GobjParameters;
 
+  if (longRoute === "/") return shortRoute;
+
   const longRouteArray = longRoute.split("/");
   const shortRouteArray = shortRoute.split("/");
 
