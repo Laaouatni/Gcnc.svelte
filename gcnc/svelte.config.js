@@ -18,7 +18,7 @@ const config = {
 			$Gui: "./src/lib/GuiComponents",
 			$Gassets: "./src/lib/Gassets"
 		},
-	}
+	},
 };
 
 export default config;
