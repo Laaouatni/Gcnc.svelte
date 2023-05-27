@@ -1,9 +1,25 @@
 # Gcnc.svelte
 
 > # ⚠️ June 23: 
-> I got to a situation where I think I need to refactor the code so that it is better and so it becomes easy to work with. my idea now is to make it a library based on a global JSON... it is so much better than the code in this repo.
+> I got to a situation 
+> <wbr> where I think I need to refactor the code 
+> <wbr> so that it is better 
+> <wbr> and so it becomes easy to work with. 
+> <br> My idea now is to make it a library based on a global JSON... 
+> <wbr> it is so much better than the code in this repo.
+> 
+> I won't focus anymore on the UI/Design 
+> <wbr> but in real logic to make this work 
+> <br> (since from experience from this repo, 
+> <wbr> I used a lot of time in styling than coding the logic it self).
+> <br> Once everything will work, then I will make it stylable (with some simple tailwind classes)
 >
-> New code here: https://github.com/Laaouatni/gcode-library-refactoring (still in development, don't use it unless you see the main branch with real code than the readme and licence...)
+> New code here: 
+> <wbr> https://github.com/Laaouatni/gcode-library-refactoring 
+> <wbr> (still in development, 
+> <wbr> don't use it, 
+> <wbr> unless you see the main branch with real code, 
+> <wbr> not only the readme and licence...)
 
 ---------
 
